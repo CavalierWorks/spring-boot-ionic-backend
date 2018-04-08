@@ -2,10 +2,23 @@ package com.nelioalves.cursomc.domain;
 
 import java.io.Serializable;
 
-public class Categoria implements Serializable {	
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+	
+/*Essa primeira anotação [@Entity] indica que a classe abaixo
+será transformada em uma tabela de banco de dados*/
 
+@Entity
+public class Categoria implements Serializable {	
 	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
+	/*O valor 'IDENTITY é adequado ao banco de dados H2 e alguns outros
+	 dependendo do banco de dados esse valor pode precisar ser alterado*/
 	private String nome;
 	
 	public Categoria() {		
