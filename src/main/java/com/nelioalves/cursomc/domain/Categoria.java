@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 	
 /*Essa primeira anotação [@Entity] indica que a classe abaixo
 será transformada em uma tabela de banco de dados*/
@@ -24,6 +26,7 @@ public class Categoria implements Serializable {
 	 dependendo do banco de dados esse valor pode precisar ser alterado*/
 	private String nome;
 	
+	@JsonManagedReference
 	@ManyToMany(mappedBy="categorias")
 	private List<Produto> produtos = new ArrayList<>();
 	
