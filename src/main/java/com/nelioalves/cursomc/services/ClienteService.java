@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import com.nelioalves.cursomc.DTO.ClienteDTO;
 import com.nelioalves.cursomc.domain.Cliente;
-import com.nelioalves.cursomc.domain.Cliente;
 import com.nelioalves.cursomc.repositories.ClienteRepository;
 import com.nelioalves.cursomc.services.exceptions.DataIntegrityException;
 import com.nelioalves.cursomc.services.exceptions.ObjectNotFoundException;
